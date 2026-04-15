@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment Four</title>
+
+   <link rel="shortcut icon" href="./resourse/logo1.png" type="image/x-icon">
+
+    <!-- tailwind and daigy -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+
+    <!-- font-awsome- icon -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+
+    <style>
+        *{
+            font-family: "Outfit", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <head> 
+
+    </head>
+    <body class="container mx-auto  ">
+        <h1 class="font-bold text-4xl py-4 ">Job Application Tracker</h1>
+
+            <div class="flex gap-2 justify-between my-4">
+
+            <div class="card card-border bg-base-100 w-120 ">
+            <div class="card-body justify-center shadow-sm">
+            <h3 class="text-[16px]">Total</h3>                
+            <h2 id="total-jobs" class=" font-bold text-2xl ">0</h2>            
+            </div>
+            </div>
+
+            <div class="card card-border bg-base-100 w-120">
+            <div class="card-body justify-center shadow-sm">
+            <h3 class="text-[16px] ">Interview</h3>                
+            <h2 id="interviewCardsCount" class=" font-bold text-2xl text-green-500">0</h2>            
+            </div>
+            </div>
+
+            <div class="card card-border bg-base-100 w-120">
+            <div class="card-body justify-center shadow-sm">
+            <h3 class="text-[16px] ">Regected</h3>                
+            <h2 class=" font-bold text-2xl text-red-500">0</h2>            
+            </div>
+            </div>
+
+            </div>   
+        
+
+        <div class="flex items-center justify-between">
+        <h1 class="font-semibold text-[2rem] py-">Aviable Jobs</h1>
+        <p class="">8 jobs</p>
+        </div>
+
+        <!-- name of each tab group should be unique -->
+        <div>
+            <button onclick="showOnly('all-jobs-section')" class="btn btn-soft bg-[#146acd] text-white ">All Jobs</button>
+
+            <button onclick="showOnly('interview-section' )" class="btn btn-soft bg-[#146acd] text-white">Interview
+            </button>
+            
+            <button onclick="showOnly('rejected-section')" class="btn btn-soft bg-[#146acd] text-white">Rejected</button>
+        </div>
+
+        <!-- all jobs section -->
+        <section id="all-jobs-section" class="  py-4">           
+           <h1 class="bg-blue-300 text-2xl">All jobs</h1>
+           
+           <div data-id="1" class="card  card-border bg-base-400 w-[95%] shadow-sm">
+                <div class="card-body ">
+
+                <div class="flex justify-between">
+                    <h2 class="card-title">Card Title 1</h2>
+                    <button><i class=" text-2xl fa-regular fa-trash-can"></i></button>
+                </div>
+                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+
+                <p>Remote: 8 am</p>
+                <div>
+                <button class=" status-interview btn btn-active hidden">Interview</button>
+                <button class="status-rejected  btn btn-active hidden">Rejected</button>
+                
+                <p >this is a line</p>
+                </div>
+                <div class="card-actions ">
+                <button  class="interview-btn-card btn btn-outline btn-success">Interview</button>
+                <button  class="rejected-btn-card btn btn-outline btn-error">Regected</button>
+                </div>
+                </div>
+            </div>
+            
+           <div data-id="2" class="card  card-border bg-base-400 w-[95%] shadow-sm">
+            
+                <div class="card-body ">
+                <h2 class="card-title">Card Title 1</h2>
+                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+
+                <p>Remote: 8 am</p>
+                <div>
+                <button class=" status-interview btn btn-active hidden">Interview</button>
+                <button class="status-rejected  btn btn-active hidden">Rejected</button>
+                
+                <p >this is a line</p>
+                </div>
+                <div class="card-actions ">
+                <button  class="interview-btn-card btn btn-outline btn-success">Interview</button>
+                <button  class="rejected-btn-card btn btn-outline btn-error">Regected</button>
+                </div>
+                </div>       
+            </div>
+            
+        </section>
+
+        <!-- interview section -->
+        <section id="interview-section" class=" hidden py-4">
+            <h1 class="bg-purple-300 text-2xl">interview</h1>
+
+        </section>
+
+        <!-- regected section -->
+         <section id="rejected-section" class=" hidden py-4">
+            <h1 class="bg-red-300 text-2xl">Rejected</h1>
+         </section>
+    
+    <script src="./script/all-jobs.js"></script>
+    <script src="./script/machine.js"></script>
+    
+</body>
+</html>
+
